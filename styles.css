@@ -1,0 +1,63 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #007bff;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Modificamos el main para usar CSS Grid */
+.chapters-grid {
+    padding: 20px;
+    max-width: 1200px; /* Aumentamos el ancho máximo para más columnas */
+    margin: 0 auto;
+    display: grid; /* Convertimos el contenedor en una cuadrícula */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* 300px es el tamaño mínimo por columna */
+    gap: 20px; /* Espacio entre los elementos de la cuadrícula */
+    justify-content: center; /* Centra los ítems si no llenan la última fila */
+}
+
+/* Estilo para cada item de capítulo (el div con clase chapter-item) */
+.chapter-item {
+    background-color: white;
+    padding: 15px; /* Reducimos un poco el padding */
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center; /* Centra el título y el video dentro de cada item */
+}
+
+/* Ajustamos el video para que se adapte bien dentro de su contenedor */
+.chapter-item video {
+    width: 100%; /* El video ocupa el 100% del ancho del .chapter-item */
+    height: auto; /* Mantiene la proporción del video */
+    display: block;
+    margin-top: 10px; /* Espacio superior */
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+/* Quitamos el estilo anterior de section si ya no lo necesitamos tan amplio */
+section {
+    margin-bottom: 0; /* Ya no necesitamos margen inferior en la sección */
+    padding: 0; /* Opcional: si el padding del chapter-item es suficiente */
+}
+
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #333;
+    color: white;
+    /* Ajustamos el footer para que no se superponga si hay muchos videos */
+    position: static; 
+    bottom: auto;
+    width: 100%;
+    margin-top: 20px; /* Espacio entre el contenido y el footer */
+}
